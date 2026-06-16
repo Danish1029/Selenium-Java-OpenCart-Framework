@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Verify Account Registration using valid credentials","6318","verify_account_registration","Suite","2026-06-11","passed","2026-06-11","testCases.TC_001_AccountRegistrationTest","Test","testCases.TC_001_AccountRegistrationTest","verify_account_registration"

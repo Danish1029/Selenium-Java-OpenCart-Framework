@@ -1,0 +1,21 @@
+STEPS TO GENERATE ALLURE REPORTS:
+
+my project directory : cmd prompt : cd C:\Users\danis\eclipse-workspace\opencart26
+cmd prompt : dir
+How To Open The Actual Report :cmd :  allure serve allure-results
+
+Permanent Report Generate: cmd : allure generate allure-results --clean
+
+open allure report : cmd : allure open allure-report
+
+
+Generate timestamped reports. :cmd:  allure generate allure-results -o allure-report-2026-06-11-18-00 --clean
+
+Project directory : cd C:\Users\danis\eclipse-workspace\opencart26
+
+cmd : allure serve allure-results
+
+
+using cmd prompt : generateAllureReport.bat
+
+manual report by CMD : allure open reports\allure\allure-report-20260611_2056
