@@ -1,0 +1,12 @@
+# Ignore Maven compiled binaries and target directory
+target/
+
+# Ignore Eclipse-specific metadata settings
+.settings/
+.project
+.classpath
+bin/
+
+# Ignore log files and reports generated during test runs
+*.log
+test-output/
