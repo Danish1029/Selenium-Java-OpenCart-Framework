@@ -1,13 +1,11 @@
 package pageObjects;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage extends BasePage{
 
@@ -17,20 +15,28 @@ public class HomePage extends BasePage{
 		super(driver);
 	}
 	
-	public void clickMyAccount()
-	{
-	    WebDriverWait wait =
-	            new WebDriverWait(driver,
-	                    Duration.ofSeconds(20));
+	@FindBy(xpath = "//span[normalize-space()='My Account']")
+	WebElement lnkMyAccount;
+
+	public void clickMyAccount() {
+
+	    System.out.println("========== HOME PAGE ==========");
+	    System.out.println(driver.getCurrentUrl());
+	    System.out.println(driver.getTitle());
 
 	    WebElement myAccount =
 	            wait.until(
-	                    ExpectedConditions
-	                            .visibilityOfElementLocated(
-	                                    By.xpath(
-	                                            "//span[normalize-space()='My Account']")));
+	                    ExpectedConditions.elementToBeClickable(
+	                            By.xpath("//span[normalize-space()='My Account']")));
+	    System.out.println("Displayed = " + myAccount.isDisplayed());
+	    System.out.println("Enabled   = " + myAccount.isEnabled());
+	    System.out.println("Found My Account");
 
-	    myAccount.click();
+
+	    ((JavascriptExecutor)driver)
+	            .executeScript("arguments[0].click();", myAccount);
+
+	    System.out.println("Clicked My Account");
 	}
 
 @FindBy(xpath="//a[normalize-space()='Register']") 

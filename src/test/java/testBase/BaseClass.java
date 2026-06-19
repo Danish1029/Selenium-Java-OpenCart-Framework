@@ -204,16 +204,25 @@ public class BaseClass {
               case "chrome":
               	 browserName = "Chrome";
                   driver = new ChromeDriver();
+                  driver.manage().window().maximize();
+
+                  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                   break;
 
               case "edge":
               	browserName = "Edge";
                   driver = new EdgeDriver();
+                  driver.manage().window().maximize();
+
+                  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                   break;
 
               case "firefox":
               	 browserName = "Firefox";
                   driver = new FirefoxDriver();
+                  driver.manage().window().maximize();
+
+                  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                   break;
 
               default:
