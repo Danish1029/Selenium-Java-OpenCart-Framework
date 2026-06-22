@@ -1,152 +1,27 @@
-2026-06-16 01:07:00.066 [main] INFO  TC_002_LoginTest:71 - Launching browser: chrome
-2026-06-16 01:07:00.204 [main] INFO  TC_001_AccountRegistrationTest:71 - Launching browser: chrome
-2026-06-16 01:17:03.652 [main] INFO  TC_001_AccountRegistrationTest:75 - Launching browser: chrome
-2026-06-16 01:17:03.709 [main] INFO  TC_002_LoginTest:75 - Launching browser: chrome
-2026-06-16 01:35:52.840 [main] INFO  TC_002_LoginTest:75 - Launching browser: chrome
-2026-06-16 01:35:52.844 [main] INFO  TC_002_LoginTest:198 - Connected to Selenium local env
-2026-06-16 01:35:56.453 [main] INFO  TC_002_LoginTest:224 - Starting Local Execution
-2026-06-16 01:35:56.455 [main] INFO  TC_002_LoginTest:226 - Browser : chrome
-2026-06-16 01:35:56.900 [main] INFO  TC_002_LoginTest:284 - Opening URL
-2026-06-16 01:36:02.856 [main] INFO  TC_002_LoginTest:308 - URL = https://tutorialsninja.com/demo/
-2026-06-16 01:36:02.861 [main] INFO  TC_002_LoginTest:310 - Title = Your Store
-2026-06-16 01:36:02.861 [main] INFO  TC_002_LoginTest:312 - Browser : Chrome
-2026-06-16 01:36:02.866 [main] INFO  TC_002_LoginTest:316 - ReadyState = complete
-2026-06-16 01:36:02.882 [main] INFO  TC_002_LoginTest:330 - My Account Present = true
-2026-06-16 01:36:08.061 [main] INFO  TC_002_LoginTest:350 - Current URL: https://tutorialsninja.com/demo/
-2026-06-16 01:36:08.064 [main] INFO  TC_002_LoginTest:352 - Page Title: Your Store
-2026-06-16 01:36:08.098 [main] INFO  TC_002_LoginTest:373 - Closing browser
-2026-06-16 01:36:08.410 [main] INFO  TC_001_AccountRegistrationTest:75 - Launching browser: chrome
-2026-06-16 01:36:08.411 [main] INFO  TC_001_AccountRegistrationTest:198 - Connected to Selenium local env
-2026-06-16 01:36:09.257 [main] INFO  TC_001_AccountRegistrationTest:224 - Starting Local Execution
-2026-06-16 01:36:09.257 [main] INFO  TC_001_AccountRegistrationTest:226 - Browser : chrome
-2026-06-16 01:36:09.649 [main] INFO  TC_001_AccountRegistrationTest:284 - Opening URL
-2026-06-16 01:36:11.583 [main] INFO  TC_001_AccountRegistrationTest:308 - URL = https://tutorialsninja.com/demo/
-2026-06-16 01:36:11.586 [main] INFO  TC_001_AccountRegistrationTest:310 - Title = Your Store
-2026-06-16 01:36:11.587 [main] INFO  TC_001_AccountRegistrationTest:312 - Browser : Chrome
-2026-06-16 01:36:11.591 [main] INFO  TC_001_AccountRegistrationTest:316 - ReadyState = complete
-2026-06-16 01:36:11.605 [main] INFO  TC_001_AccountRegistrationTest:330 - My Account Present = true
-2026-06-16 01:36:16.743 [main] INFO  TC_001_AccountRegistrationTest:350 - Current URL: https://tutorialsninja.com/demo/
-2026-06-16 01:36:16.748 [main] INFO  TC_001_AccountRegistrationTest:352 - Page Title: Your Store
-2026-06-16 01:36:16.763 [main] INFO  TC_001_AccountRegistrationTest:37 - ********** Starting TC_001_AccountRegistrationTest **********
-2026-06-16 01:36:16.793 [main] INFO  TC_001_AccountRegistrationTest:42 - Before Click My Account
-2026-06-16 01:36:16.921 [main] INFO  TC_001_AccountRegistrationTest:44 - Clicked My Account
-2026-06-16 01:36:17.651 [main] INFO  TC_001_AccountRegistrationTest:47 - Clicked Register
-2026-06-16 01:36:17.656 [main] INFO  TC_001_AccountRegistrationTest:52 - Providing customer details
-2026-06-16 01:36:22.058 [main] INFO  TC_001_AccountRegistrationTest:67 - Clicking Continue button
-2026-06-16 01:36:22.059 [main] INFO  TC_001_AccountRegistrationTest:68 - Before Continue
-2026-06-16 01:36:23.988 [main] INFO  TC_001_AccountRegistrationTest:70 - After Continue
-2026-06-16 01:36:23.988 [main] INFO  TC_001_AccountRegistrationTest:71 - Validating confirmation message
-2026-06-16 01:36:24.049 [main] INFO  TC_001_AccountRegistrationTest:81 - Test Passed
-2026-06-16 01:36:24.050 [main] INFO  TC_001_AccountRegistrationTest:100 - ********** Finished TC_001_AccountRegistrationTest **********
-2026-06-16 01:36:24.056 [main] INFO  TC_001_AccountRegistrationTest:373 - Closing browser
-2026-06-16 02:06:46.066 [main] INFO  TC_002_LoginTest:75 - Launching browser: chrome
-2026-06-16 02:06:46.072 [main] INFO  TC_002_LoginTest:198 - Connected to Selenium local env
-2026-06-16 02:06:48.622 [main] INFO  TC_002_LoginTest:224 - Starting Local Execution
-2026-06-16 02:06:48.623 [main] INFO  TC_002_LoginTest:226 - Browser : chrome
-2026-06-16 02:06:49.049 [main] INFO  TC_002_LoginTest:284 - Opening URL
-2026-06-16 02:06:51.280 [main] INFO  TC_002_LoginTest:308 - URL = https://tutorialsninja.com/demo/
-2026-06-16 02:06:51.284 [main] INFO  TC_002_LoginTest:310 - Title = Your Store
-2026-06-16 02:06:51.284 [main] INFO  TC_002_LoginTest:312 - Browser : Chrome
-2026-06-16 02:06:51.289 [main] INFO  TC_002_LoginTest:316 - ReadyState = complete
-2026-06-16 02:06:51.305 [main] INFO  TC_002_LoginTest:330 - My Account Present = true
-2026-06-16 02:06:56.468 [main] INFO  TC_002_LoginTest:350 - Current URL: https://tutorialsninja.com/demo/
-2026-06-16 02:06:56.473 [main] INFO  TC_002_LoginTest:352 - Page Title: Your Store
-2026-06-16 02:06:56.499 [main] INFO  TC_002_LoginTest:373 - Closing browser
-2026-06-16 02:06:56.765 [main] INFO  TC_001_AccountRegistrationTest:75 - Launching browser: chrome
-2026-06-16 02:06:56.765 [main] INFO  TC_001_AccountRegistrationTest:198 - Connected to Selenium local env
-2026-06-16 02:06:57.565 [main] INFO  TC_001_AccountRegistrationTest:224 - Starting Local Execution
-2026-06-16 02:06:57.566 [main] INFO  TC_001_AccountRegistrationTest:226 - Browser : chrome
-2026-06-16 02:06:57.967 [main] INFO  TC_001_AccountRegistrationTest:284 - Opening URL
-2026-06-16 02:07:02.371 [main] INFO  TC_001_AccountRegistrationTest:308 - URL = https://tutorialsninja.com/demo/
-2026-06-16 02:07:02.375 [main] INFO  TC_001_AccountRegistrationTest:310 - Title = Your Store
-2026-06-16 02:07:02.377 [main] INFO  TC_001_AccountRegistrationTest:312 - Browser : Chrome
-2026-06-16 02:07:02.380 [main] INFO  TC_001_AccountRegistrationTest:316 - ReadyState = complete
-2026-06-16 02:07:02.396 [main] INFO  TC_001_AccountRegistrationTest:330 - My Account Present = true
-2026-06-16 02:07:07.524 [main] INFO  TC_001_AccountRegistrationTest:350 - Current URL: https://tutorialsninja.com/demo/
-2026-06-16 02:07:07.528 [main] INFO  TC_001_AccountRegistrationTest:352 - Page Title: Your Store
-2026-06-16 02:07:07.534 [main] INFO  TC_001_AccountRegistrationTest:37 - ********** Starting TC_001_AccountRegistrationTest **********
-2026-06-16 02:07:07.557 [main] INFO  TC_001_AccountRegistrationTest:42 - Before Click My Account
-2026-06-16 02:07:07.648 [main] INFO  TC_001_AccountRegistrationTest:44 - Clicked My Account
-2026-06-16 02:07:08.226 [main] INFO  TC_001_AccountRegistrationTest:47 - Clicked Register
-2026-06-16 02:07:08.229 [main] INFO  TC_001_AccountRegistrationTest:52 - Providing customer details
-2026-06-16 02:07:11.958 [main] INFO  TC_001_AccountRegistrationTest:67 - Clicking Continue button
-2026-06-16 02:07:11.960 [main] INFO  TC_001_AccountRegistrationTest:68 - Before Continue
-2026-06-16 02:07:13.315 [main] INFO  TC_001_AccountRegistrationTest:70 - After Continue
-2026-06-16 02:07:13.316 [main] INFO  TC_001_AccountRegistrationTest:71 - Validating confirmation message
-2026-06-16 02:07:13.384 [main] INFO  TC_001_AccountRegistrationTest:81 - Test Passed
-2026-06-16 02:07:13.385 [main] INFO  TC_001_AccountRegistrationTest:100 - ********** Finished TC_001_AccountRegistrationTest **********
-2026-06-16 02:07:13.393 [main] INFO  TC_001_AccountRegistrationTest:373 - Closing browser
-2026-06-16 02:16:28.845 [main] INFO  TC_002_LoginTest:75 - Launching browser: chrome
-2026-06-16 02:16:28.853 [main] INFO  TC_002_LoginTest:198 - Connected to Selenium local env
-2026-06-16 02:16:31.425 [main] INFO  TC_002_LoginTest:224 - Starting Local Execution
-2026-06-16 02:16:31.426 [main] INFO  TC_002_LoginTest:226 - Browser : chrome
-2026-06-16 02:16:31.884 [main] INFO  TC_002_LoginTest:284 - Opening URL
-2026-06-16 02:16:33.996 [main] INFO  TC_002_LoginTest:308 - URL = https://tutorialsninja.com/demo/
-2026-06-16 02:16:34.003 [main] INFO  TC_002_LoginTest:310 - Title = Your Store
-2026-06-16 02:16:34.004 [main] INFO  TC_002_LoginTest:312 - Browser : Chrome
-2026-06-16 02:16:34.011 [main] INFO  TC_002_LoginTest:316 - ReadyState = complete
-2026-06-16 02:16:34.033 [main] INFO  TC_002_LoginTest:330 - My Account Present = true
-2026-06-16 02:16:39.235 [main] INFO  TC_002_LoginTest:350 - Current URL: https://tutorialsninja.com/demo/
-2026-06-16 02:16:39.242 [main] INFO  TC_002_LoginTest:352 - Page Title: Your Store
-2026-06-16 02:16:39.305 [main] INFO  TC_002_LoginTest:373 - Closing browser
-2026-06-16 02:16:39.901 [main] INFO  TC_001_AccountRegistrationTest:75 - Launching browser: chrome
-2026-06-16 02:16:39.902 [main] INFO  TC_001_AccountRegistrationTest:198 - Connected to Selenium local env
-2026-06-16 02:16:40.973 [main] INFO  TC_001_AccountRegistrationTest:224 - Starting Local Execution
-2026-06-16 02:16:40.974 [main] INFO  TC_001_AccountRegistrationTest:226 - Browser : chrome
-2026-06-16 02:16:41.387 [main] INFO  TC_001_AccountRegistrationTest:284 - Opening URL
-2026-06-16 02:16:43.470 [main] INFO  TC_001_AccountRegistrationTest:308 - URL = https://tutorialsninja.com/demo/
-2026-06-16 02:16:43.476 [main] INFO  TC_001_AccountRegistrationTest:310 - Title = Your Store
-2026-06-16 02:16:43.477 [main] INFO  TC_001_AccountRegistrationTest:312 - Browser : Chrome
-2026-06-16 02:16:43.484 [main] INFO  TC_001_AccountRegistrationTest:316 - ReadyState = complete
-2026-06-16 02:16:43.503 [main] INFO  TC_001_AccountRegistrationTest:330 - My Account Present = true
-2026-06-16 02:16:48.666 [main] INFO  TC_001_AccountRegistrationTest:350 - Current URL: https://tutorialsninja.com/demo/
-2026-06-16 02:16:48.672 [main] INFO  TC_001_AccountRegistrationTest:352 - Page Title: Your Store
-2026-06-16 02:16:48.679 [main] INFO  TC_001_AccountRegistrationTest:37 - ********** Starting TC_001_AccountRegistrationTest **********
-2026-06-16 02:16:48.713 [main] INFO  TC_001_AccountRegistrationTest:42 - Before Click My Account
-2026-06-16 02:16:48.894 [main] INFO  TC_001_AccountRegistrationTest:44 - Clicked My Account
-2026-06-16 02:16:49.462 [main] INFO  TC_001_AccountRegistrationTest:47 - Clicked Register
-2026-06-16 02:16:49.467 [main] INFO  TC_001_AccountRegistrationTest:52 - Providing customer details
-2026-06-16 02:16:53.401 [main] INFO  TC_001_AccountRegistrationTest:67 - Clicking Continue button
-2026-06-16 02:16:53.402 [main] INFO  TC_001_AccountRegistrationTest:68 - Before Continue
-2026-06-16 02:16:56.192 [main] INFO  TC_001_AccountRegistrationTest:70 - After Continue
-2026-06-16 02:16:56.194 [main] INFO  TC_001_AccountRegistrationTest:71 - Validating confirmation message
-2026-06-16 02:16:56.289 [main] INFO  TC_001_AccountRegistrationTest:81 - Test Passed
-2026-06-16 02:16:56.290 [main] INFO  TC_001_AccountRegistrationTest:100 - ********** Finished TC_001_AccountRegistrationTest **********
-2026-06-16 02:16:56.300 [main] INFO  TC_001_AccountRegistrationTest:373 - Closing browser
-2026-06-16 02:32:12.236 [main] INFO  TC_002_LoginTest:75 - Launching browser: chrome
-2026-06-16 02:32:12.241 [main] INFO  TC_002_LoginTest:198 - Connected to Selenium local env
-2026-06-16 02:32:14.088 [main] INFO  TC_002_LoginTest:224 - Starting Local Execution
-2026-06-16 02:32:14.089 [main] INFO  TC_002_LoginTest:226 - Browser : chrome
-2026-06-16 02:32:14.504 [main] INFO  TC_002_LoginTest:284 - Opening URL
-2026-06-16 02:32:16.444 [main] INFO  TC_002_LoginTest:308 - URL = https://tutorialsninja.com/demo/
-2026-06-16 02:32:16.449 [main] INFO  TC_002_LoginTest:310 - Title = Your Store
-2026-06-16 02:32:16.450 [main] INFO  TC_002_LoginTest:312 - Browser : Chrome
-2026-06-16 02:32:16.455 [main] INFO  TC_002_LoginTest:316 - ReadyState = complete
-2026-06-16 02:32:16.472 [main] INFO  TC_002_LoginTest:330 - My Account Present = true
-2026-06-16 02:32:21.785 [main] INFO  TC_002_LoginTest:350 - Current URL: https://tutorialsninja.com/demo/
-2026-06-16 02:32:21.790 [main] INFO  TC_002_LoginTest:352 - Page Title: Your Store
-2026-06-16 02:32:21.821 [main] INFO  TC_002_LoginTest:373 - Closing browser
-2026-06-16 02:32:22.072 [main] INFO  TC_001_AccountRegistrationTest:75 - Launching browser: chrome
-2026-06-16 02:32:22.073 [main] INFO  TC_001_AccountRegistrationTest:198 - Connected to Selenium local env
-2026-06-16 02:32:22.903 [main] INFO  TC_001_AccountRegistrationTest:224 - Starting Local Execution
-2026-06-16 02:32:22.904 [main] INFO  TC_001_AccountRegistrationTest:226 - Browser : chrome
-2026-06-16 02:32:23.339 [main] INFO  TC_001_AccountRegistrationTest:284 - Opening URL
-2026-06-16 02:32:25.451 [main] INFO  TC_001_AccountRegistrationTest:308 - URL = https://tutorialsninja.com/demo/
-2026-06-16 02:32:25.456 [main] INFO  TC_001_AccountRegistrationTest:310 - Title = Your Store
-2026-06-16 02:32:25.458 [main] INFO  TC_001_AccountRegistrationTest:312 - Browser : Chrome
-2026-06-16 02:32:25.464 [main] INFO  TC_001_AccountRegistrationTest:316 - ReadyState = complete
-2026-06-16 02:32:25.476 [main] INFO  TC_001_AccountRegistrationTest:330 - My Account Present = true
-2026-06-16 02:32:30.680 [main] INFO  TC_001_AccountRegistrationTest:350 - Current URL: https://tutorialsninja.com/demo/
-2026-06-16 02:32:30.686 [main] INFO  TC_001_AccountRegistrationTest:352 - Page Title: Your Store
-2026-06-16 02:32:30.692 [main] INFO  TC_001_AccountRegistrationTest:37 - ********** Starting TC_001_AccountRegistrationTest **********
-2026-06-16 02:32:30.717 [main] INFO  TC_001_AccountRegistrationTest:42 - Before Click My Account
-2026-06-16 02:32:30.841 [main] INFO  TC_001_AccountRegistrationTest:44 - Clicked My Account
-2026-06-16 02:32:31.393 [main] INFO  TC_001_AccountRegistrationTest:47 - Clicked Register
-2026-06-16 02:32:31.397 [main] INFO  TC_001_AccountRegistrationTest:52 - Providing customer details
-2026-06-16 02:32:35.268 [main] INFO  TC_001_AccountRegistrationTest:67 - Clicking Continue button
-2026-06-16 02:32:35.268 [main] INFO  TC_001_AccountRegistrationTest:68 - Before Continue
-2026-06-16 02:32:35.390 [main] INFO  TC_001_AccountRegistrationTest:70 - After Continue
-2026-06-16 02:32:35.390 [main] INFO  TC_001_AccountRegistrationTest:71 - Validating confirmation message
-2026-06-16 02:32:36.835 [main] INFO  TC_001_AccountRegistrationTest:81 - Test Passed
-2026-06-16 02:32:36.835 [main] INFO  TC_001_AccountRegistrationTest:100 - ********** Finished TC_001_AccountRegistrationTest **********
-2026-06-16 02:32:36.842 [main] INFO  TC_001_AccountRegistrationTest:373 - Closing browser
+2026-06-19 09:27:25.712 [main] INFO  Utils:112 - [TestNG] Running:
+  C:\Users\danis\eclipse-workspace\opencart26\mastersuite.xml
+
+2026-06-19 09:27:26.194 [main] INFO  TC_001_AccountRegistrationTest:75 - Launching browser: Chrome
+2026-06-19 09:27:26.196 [main] INFO  TC_001_AccountRegistrationTest:198 - Connected to Selenium local env
+2026-06-19 09:27:39.231 [main] INFO  TC_001_AccountRegistrationTest:233 - Starting Local Execution
+2026-06-19 09:27:39.231 [main] INFO  TC_001_AccountRegistrationTest:235 - Browser : Chrome
+2026-06-19 09:27:39.655 [main] INFO  TC_001_AccountRegistrationTest:293 - Opening URL
+2026-06-19 09:27:46.532 [main] INFO  TC_001_AccountRegistrationTest:317 - URL = https://tutorialsninja.com/demo/
+2026-06-19 09:27:46.536 [main] INFO  TC_001_AccountRegistrationTest:319 - Title = Your Store
+2026-06-19 09:27:46.538 [main] INFO  TC_001_AccountRegistrationTest:321 - Browser : Chrome
+2026-06-19 09:27:46.543 [main] INFO  TC_001_AccountRegistrationTest:325 - ReadyState = complete
+2026-06-19 09:27:46.561 [main] INFO  TC_001_AccountRegistrationTest:339 - My Account Present = true
+2026-06-19 09:27:51.717 [main] INFO  TC_001_AccountRegistrationTest:359 - Current URL: https://tutorialsninja.com/demo/
+2026-06-19 09:27:51.722 [main] INFO  TC_001_AccountRegistrationTest:361 - Page Title: Your Store
+2026-06-19 09:27:51.792 [main] INFO  TC_001_AccountRegistrationTest:37 - ********** Starting TC_001_AccountRegistrationTest **********
+2026-06-19 09:27:51.816 [main] INFO  TC_001_AccountRegistrationTest:42 - Before Click My Account
+2026-06-19 09:27:51.918 [main] INFO  TC_001_AccountRegistrationTest:44 - Clicked My Account
+2026-06-19 09:27:52.577 [main] INFO  TC_001_AccountRegistrationTest:47 - Clicked Register
+2026-06-19 09:27:52.580 [main] INFO  TC_001_AccountRegistrationTest:52 - Providing customer details
+2026-06-19 09:27:56.346 [main] INFO  TC_001_AccountRegistrationTest:67 - Clicking Continue button
+2026-06-19 09:27:56.347 [main] INFO  TC_001_AccountRegistrationTest:68 - Before Continue
+2026-06-19 09:27:58.388 [main] INFO  TC_001_AccountRegistrationTest:70 - After Continue
+2026-06-19 09:27:58.389 [main] INFO  TC_001_AccountRegistrationTest:71 - Validating confirmation message
+2026-06-19 09:27:58.437 [main] INFO  TC_001_AccountRegistrationTest:81 - Test Passed
+2026-06-19 09:27:58.438 [main] INFO  TC_001_AccountRegistrationTest:100 - ********** Finished TC_001_AccountRegistrationTest **********
+2026-06-19 09:27:58.577 [main] INFO  TC_001_AccountRegistrationTest:382 - Closing browser

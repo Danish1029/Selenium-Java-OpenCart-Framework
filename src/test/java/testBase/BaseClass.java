@@ -88,7 +88,40 @@ public class BaseClass {
         if (executionEnv.equalsIgnoreCase("remote")) 
         {
         	
-        	
+    /*  // 1. Read parameter from Jenkins/Maven command line properties
+String browser = System.getProperty("browser");
+
+// 2. Fallback to default browser if no command line parameter is specified
+if (browser == null) {
+    browser = "chrome";
+}
+
+MutableCapabilities capabilities;
+
+// 3. Evaluate and launch the targeted test container environment
+switch (browser.toLowerCase().trim()) 
+{
+    case "chrome":
+        ChromeOptions chromeOptions = new ChromeOptions();
+        capabilities = chromeOptions;
+        driver = new ChromeDriver(chromeOptions);
+        break;
+        
+    case "firefox":
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        capabilities = firefoxOptions;
+        driver = new FirefoxDriver(firefoxOptions);
+        break;
+        
+    case "edge":
+        EdgeOptions edgeOptions = new EdgeOptions();
+        capabilities = edgeOptions;
+        driver = new EdgeDriver(edgeOptions);
+        break;
+        
+    default:
+        throw new IllegalArgumentException("Invalid browser selection: " + browser);
+}   */  	
             MutableCapabilities capabilities;
 
             // Browser Configuration
@@ -110,6 +143,7 @@ public class BaseClass {
                         "--window-size=1920,1080");
 
                 capabilities = chromeOptions;
+                driver = new ChromeDriver(chromeOptions);
 
                 browserName = "Chrome";
 
@@ -121,6 +155,7 @@ public class BaseClass {
                         new EdgeOptions();
 
                 capabilities = edgeOptions;
+                driver = new EdgeDriver(edgeOptions);
 
                 browserName = "Edge";
 
@@ -132,6 +167,7 @@ public class BaseClass {
                         new FirefoxOptions();
 
                 capabilities = firefoxOptions;
+                driver = new FirefoxDriver(firefoxOptions);
 
                 browserName = "Firefox";
 
@@ -140,7 +176,7 @@ public class BaseClass {
             default:
 
                 throw new IllegalArgumentException(
-                        "Unsupported browser : " + br);
+                        "Unsupported browser selection : " + br);
         }
             // Platform Configuration
 
