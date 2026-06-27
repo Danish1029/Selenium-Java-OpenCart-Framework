@@ -51,6 +51,9 @@ public class BaseClass {
  
     @BeforeClass (groups= {"Sanity","Regression","Master"}) //Step8 groups added
     @Parameters({"os","browser"})  // getting browser parameter from testng.xml
+    
+  
+    
     public void setup(
             @Optional("windows") String os,
             @Optional("chrome") String br)
@@ -63,16 +66,42 @@ public class BaseClass {
  /*   	System.out.println("Execution Env = "
     	        + p.getProperty("execution_env"));  */
 
-        try (FileReader file =
+   /*     try (FileReader file =
                      new FileReader("./src/test/resources/config.properties")) {
 
             p = new Properties();
             p.load(file);
-        }
+        }  */
+    	
+    	
+    	String env = System.getProperty("env");
+
+    	if (env == null || env.isBlank()) {
+    	    env = "qa";
+    	}
+
+    	try (FileReader file =
+    	        new FileReader("./src/test/resources/config/" + env + ".properties"))
+    	{
+
+    	    p = new Properties();
+    	    p.load(file);
+    	} 	
+    	
+    	  String browser = System.getProperty("browser");
+
+    	    if (browser == null || browser.isBlank()) {
+    	        browser = br;
+    	    }
+    	    
+    	    boolean headless =
+    	    		Boolean.parseBoolean(
+    	    		System.getProperty("headless","false"));
+    	    
 
         logger = LogManager.getLogger(this.getClass());
 
-        logger.info("Launching browser: {}", br);
+        logger.info("Launching browser: {}", browser);
         
         /*..............Selenium Grid "Remote environment" setup starts here......*/
         /*..............Selenium Grid Remote Environment Setup Starts Here..............*/
@@ -126,7 +155,8 @@ switch (browser.toLowerCase().trim())
 
             // Browser Configuration
 
-            switch (br.toLowerCase())
+  //          switch (br.toLowerCase())
+            switch (browser.toLowerCase())        
             {
             case "chrome":
 
@@ -142,6 +172,12 @@ switch (browser.toLowerCase().trim())
                 chromeOptions.addArguments(
                         "--window-size=1920,1080");
 
+              
+                if(headless)
+                {
+                    chromeOptions.addArguments("--headless=new");
+                }
+                
                 capabilities = chromeOptions;
                 driver = new ChromeDriver(chromeOptions);
 
@@ -153,6 +189,21 @@ switch (browser.toLowerCase().trim())
 
                 EdgeOptions edgeOptions =
                         new EdgeOptions();
+                
+                edgeOptions.addArguments(
+                        "--no-sandbox");
+
+                edgeOptions.addArguments(
+                        "--disable-dev-shm-usage");
+
+                edgeOptions.addArguments(
+                        "--window-size=1920,1080");
+
+              
+                if(headless)
+                {
+                    edgeOptions.addArguments("--headless=new");
+                }   
 
                 capabilities = edgeOptions;
                 driver = new EdgeDriver(edgeOptions);
@@ -166,6 +217,22 @@ switch (browser.toLowerCase().trim())
                 FirefoxOptions firefoxOptions =
                         new FirefoxOptions();
 
+                firefoxOptions.addArguments(
+                        "--no-sandbox");
+
+                firefoxOptions.addArguments(
+                        "--disable-dev-shm-usage");
+
+                firefoxOptions.addArguments(
+                        "--window-size=1920,1080");
+
+              
+                if(headless)
+                {
+                    firefoxOptions.addArguments("--headless=new");
+                }      
+                
+                
                 capabilities = firefoxOptions;
                 driver = new FirefoxDriver(firefoxOptions);
 
@@ -176,7 +243,7 @@ switch (browser.toLowerCase().trim())
             default:
 
                 throw new IllegalArgumentException(
-                        "Unsupported browser selection : " + br);
+                        "Unsupported browser selection : " + browser);
         }
             // Platform Configuration
 
@@ -207,8 +274,10 @@ switch (browser.toLowerCase().trim())
             logger.info(
                     "Starting Remote Execution");
 
-            logger.info(
-                    "Browser : " + br);
+ /*           logger.info(
+                    "Browser : " + br); */
+            
+            logger.info("Browser : {}", browser);       
 
             logger.info(
                     "Operating System : " + os);
@@ -235,11 +304,23 @@ switch (browser.toLowerCase().trim())
                       "Connected to Selenium local env");
           
 
-          switch (br.toLowerCase()) {
-
+   //       switch (br.toLowerCase()) {
+          switch(browser.toLowerCase()) {
               case "chrome":
               	 browserName = "Chrome";
-                  driver = new ChromeDriver();
+       //           driver = new ChromeDriver();
+              	 
+              	ChromeOptions chromeoptions = new ChromeOptions();
+
+              	if(headless)
+              	{
+              	    chromeoptions.addArguments("--headless=new");
+              	}
+
+              	driver = new ChromeDriver(chromeoptions);      	 
+              	 
+              	 
+              	 
                   driver.manage().window().maximize();
 
                   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -247,7 +328,18 @@ switch (browser.toLowerCase().trim())
 
               case "edge":
               	browserName = "Edge";
-                  driver = new EdgeDriver();
+  //                driver = new EdgeDriver();
+              	
+              	EdgeOptions edgeOptions = new EdgeOptions();
+
+              	if(headless)
+              	{
+              	    edgeOptions.addArguments("--headless=new");
+              	}
+
+              	driver = new EdgeDriver(edgeOptions);            	
+              	
+              	
                   driver.manage().window().maximize();
 
                   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -255,20 +347,33 @@ switch (browser.toLowerCase().trim())
 
               case "firefox":
               	 browserName = "Firefox";
-                  driver = new FirefoxDriver();
-                  driver.manage().window().maximize();
+//                  driver = new FirefoxDriver();
+  
+              	 
+              	FirefoxOptions fireoptions = new FirefoxOptions();
+
+              	if(headless)
+              	{
+              	    fireoptions.addArguments("-headless");
+              	}
+
+              	driver = new FirefoxDriver(fireoptions);            	 
+              	 
+              	 
+              	 
+              	 driver.manage().window().maximize();
 
                   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                   break;
 
               default:
                   throw new IllegalArgumentException(
-                          "Invalid browser name: " + br);
+                          "Invalid browser name: " + browser);
                  }
           
           logger.info("Starting Local Execution");
 
-          logger.info("Browser : {}", br);
+          logger.info("Browser : {}", browser);
           }
           
           else {
@@ -281,7 +386,7 @@ switch (browser.toLowerCase().trim())
         	{
         	    throw new RuntimeException(
         	            "Driver was not initialized. " +
-        	            "Browser=" + br +
+        	            "Browser=" + browser +
         	            ", OS=" + os +
         	            ", Env=" + p.getProperty("execution_env"));
         	}
@@ -329,7 +434,7 @@ switch (browser.toLowerCase().trim())
         logger.info("Opening URL");
 
         driver.get(
-                p.getProperty("appURL2"));// get url from config.properties file
+                p.getProperty("appURL"));// get url from config.properties file
         
  //       driver.get(p.getProperty("appURL1"));
         

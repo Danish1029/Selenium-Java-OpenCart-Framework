@@ -10,14 +10,27 @@ pipeline {
         timeout(time: 30, unit: 'MINUTES')
     }
 
-    parameters {
+   parameters {
 
-        choice(
-            name: 'BROWSER',
-            choices: ['chrome','edge','firefox'],
-            description: 'Select Browser')
+    choice(
+        name: 'BROWSER',
+        choices: ['chrome','edge','firefox'],
+        description: 'Select Browser'
+    )
 
-    }
+    choice(
+        name: 'ENV',
+        choices: ['qa','uat','prod'],
+        description: 'Select Environment'
+    )
+
+    booleanParam(
+        name: 'HEADLESS',
+        defaultValue: false,
+        description: 'Headless Execution'
+    )
+
+}
 
     environment {
 
@@ -58,7 +71,12 @@ pipeline {
 
                 echo '========== TEST EXECUTION =========='
 
-                bat "mvn test -Dbrowser=${params.BROWSER}"
+               bat """
+mvn clean test ^
+-Dbrowser=${params.BROWSER} ^
+-Denv=${params.ENV} ^
+-Dheadless=${params.HEADLESS}
+"""
 
             }
 
