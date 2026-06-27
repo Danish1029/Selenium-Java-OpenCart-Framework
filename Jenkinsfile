@@ -2,36 +2,151 @@ pipeline {
 
     agent any
 
+    options {
+        timestamps()
+        buildDiscarder(logRotator(
+                daysToKeepStr: '30',
+                numToKeepStr: '50'))
+        timeout(time: 30, unit: 'MINUTES')
+    }
+
+    parameters {
+
+        choice(
+            name: 'BROWSER',
+            choices: ['chrome','edge','firefox'],
+            description: 'Select Browser')
+
+    }
+
+    environment {
+
+        MAVEN_OPTS = '-Xmx1024m'
+
+    }
+
     stages {
 
-        stage('Checkout') {
+        stage('Checkout Source') {
+
             steps {
-                echo 'Checking out source code...'
+
+                echo '========== CHECKOUT =========='
+
+                cleanWs()
+
                 checkout scm
+
             }
         }
 
-        stage('Build') {
+        stage('Build Project') {
+
             steps {
-                echo 'Running Maven Build...'
-                bat 'mvn clean test'
+
+                echo '========== BUILD =========='
+
+                bat 'mvn clean compile'
+
             }
+
+        }
+
+        stage('Execute Tests') {
+
+            steps {
+
+                echo '========== TEST EXECUTION =========='
+
+                bat "mvn test -Dbrowser=${params.BROWSER}"
+
+            }
+
+        }
+
+        stage('Publish Allure Report') {
+
+            steps {
+
+                allure(
+                    includeProperties: false,
+                    jdk: '',
+                    results: [[path: 'allure-results']]
+                )
+
+            }
+
+        }
+
+        stage('Publish HTML Report') {
+
+            steps {
+
+                publishHTML(target: [
+
+                    allowMissing: true,
+
+                    alwaysLinkToLastBuild: true,
+
+                    keepAll: true,
+
+                    reportDir: 'reports',
+
+                    reportFiles: '*.html',
+
+                    reportName: 'Extent Report'
+
+                ])
+
+            }
+
+        }
+
+        stage('Archive Reports') {
+
+            steps {
+
+                archiveArtifacts artifacts: '''
+                reports/**/*.html,
+                screenshots/**/*.png,
+                logs/**/*.log,
+                allure-results/**
+                ''',
+
+                fingerprint: true
+
+            }
+
         }
 
     }
 
     post {
 
-        always {
-            echo 'Pipeline Finished'
-        }
-
         success {
-            echo 'Build Successful'
+
+            echo 'BUILD SUCCESS'
+
         }
 
         failure {
-            echo 'Build Failed'
+
+            echo 'BUILD FAILED'
+
+        }
+
+        unstable {
+
+            echo 'BUILD UNSTABLE'
+
+        }
+
+        always {
+
+            echo 'Cleaning Workspace'
+
+            cleanWs()
+
         }
 
     }
